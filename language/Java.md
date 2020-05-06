@@ -13,21 +13,21 @@
 5.  해석된 바이트 코드는 메모리 영역에 배치되어 실질적인 수행이 이루어진다.
 
 ### JVM 구조
-- Class Loader(클래스 로더)
+- Class Loader(클래스 로더)  
 JVM은 런타임시에 클래스를 참조할 때 해당 클래스를 로드하고 메모리 영역에 배치시킨다. 이 `동적 로드`를 담당하는 부분이 바로 클래스 로더이다.
 
-- Execution Engine(실행 엔진)
+- Execution Engine(실행 엔진)  
 클래스 로더에 의해 메모리에 배치된 바이트코드를 해석하여 실행시킨다.
-  - Interpreter(인터프리터)
+  - Interpreter(인터프리터)  
 바이트코드를 명령어 단위로 읽어서 실행한다. 한 줄 씩 수행하기 때문에 느리다.
-  - JIT Compiler(Just-In-Time 컴파일러)
+  - JIT Compiler(Just-In-Time 컴파일러)  
 인터프리터의 단점을 보완하기 위해 도입되었다. 인터프리터 방식으로 실행하다가 적절한 시점에 바이트코드 전체를 네이티브 코드로 컴파일하고 이후부터는 인터프리팅 하지 않고 직접 실행한다.
 하지만 인터프리터에 비해 시간이 오래 걸리므로 자주 실행되지 않는 코드라면 인터프리팅하는 것이 유리하다. 따라서 JVM 내부적으로 해당 메서드가 얼마나 자주 수행되는지 체크하여 특정 범위를 넘을 때에 컴파일을 수행한다.
   - Garbage Collector
 
-- Runtime Data Area
+- Runtime Data Area  
 JVM이 OS에게 할당받은 메모리 공간
-  - PC Register
+  - PC Register  
 스레드가 시작될 때 생성되며 스레드가 어떤 명령을 실행해야 할지 기록하는 부분으로 현재 수행중인 JVM 명령의 주소를 갖는다.
   - JVM Stack
   - Native Method Stack
