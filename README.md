@@ -3,6 +3,7 @@
 
 ## Computer Science
 - 운영체제 [move](https://github.com/yurak-choi/tech-interview/blob/master/cs/os.md)
+- 데이터베이스 [move](https://github.com/yurak-choi/tech-interview/blob/master/cs/db.md)
 
 ## Language
 - JAVA [move](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md)
