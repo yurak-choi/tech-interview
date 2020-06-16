@@ -1,4 +1,12 @@
 # Spring
+- [IoC](https://github.com/yurak-choi/tech-interview/blob/master/web/spring.md#ioc)
+  - IoC Container
+  - IoC의 구현
+- [Spring MVC 순서](https://github.com/yurak-choi/tech-interview/blob/master/web/spring.md#spring-mvc-순서)
+- [Mybatis와 JPA](https://github.com/yurak-choi/tech-interview/blob/master/web/spring.md#mybatis와-jpa)
+  - Mybatis
+  - JPA(ORM)
+___
 
 ## IoC
 **IoC(Inversion of Control)**란 제어의 역전, 즉 제어권이 역전되었다는 뜻이다.
@@ -22,7 +30,9 @@ IoC에서의 DI는 Bean 설정 정보를 바탕으로 컨테이너가 클래스 
   - Setter Injection
   - Constructor Injection
   - Method Injection
-  
+
+___
+
 ## Spring MVC 순서
 1. 클라이언트로부터 받은 요청을 DispatcherServlet이 HandlerMapping에게 넘긴다.
 2. HandlerMapping은 이에 맞는 컨트롤러명을 반환한다.
@@ -30,3 +40,25 @@ IoC에서의 DI는 Bean 설정 정보를 바탕으로 컨테이너가 클래스 
 4. 컨트롤러는 비즈니스 로직을 수행한 후 Model과 View를 ModelAndView 객체로 DispatcherServlet에게 넘겨준다.
 5. DispatcherServlet은 이에 맞는 View를 ViewResolver에 요청한다.
 6. ViewResolver에게 받은 View에게 Model을 넘겨 출력한다.
+
+___
+
+## Mybatis와 JPA
+### Mybatis
+JDBC를 좀더 편하게 사용할 수 있도록 SQL이나 저장 프로시저를 객체와 연결시켜주는 Persistence Framework  
+  
+**특징**
+- 코드와 SQL의 분리
+- SQL을 직접 다루므로 복잡한 쿼리 작성 가능
+
+### JPA(ORM)
+- ORM(Object Relational Mapping) : 데이터베이스 테이블과 자바 객체 사이의 매핑을 처리해주는 기술
+- JPA(Java Persistence API) : 자바 진영의 ORM 표준 기술
+
+**특징**
+- CRUD와 같은 간단한 쿼리는 자동으로 처리
+- SQL이 아닌 객체 중심 개발
+- 복잡한 쿼리 작성의 어려움
+  - JPQL, 순수 SQL, Mybatis 혼용 사용
+
+___

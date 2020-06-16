@@ -1,11 +1,14 @@
 # JAVA
-- [JVM](https://github.com/yurak-choi/tech-interview/blob/master/language/Java.md#jvm)
+- [JVM](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md#jvm)
   - 실행 과정
   - JVM 구조
-- [GC](https://github.com/yurak-choi/tech-interview/blob/master/language/Java.md#gc)
+- [GC](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md#gc)
   - Stop The World
   - Minor GC와 Major GC
-- [객체 지향의 4대 특성](https://github.com/yurak-choi/tech-interview/blob/master/language/Java.md#객체-지향의-4대-특성)
+- [객체 지향의 4대 특성](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md#객체-지향의-4대-특성)
+- [JAVA8 변경 사항](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md#java8-변경-사항)
+
+___
 
 ## JVM
 **JVM**(Java Virtual Machine)은 class 파일(Byte Code)을 OS가 이해할수 있도록 해석하여 실행시켜주는 역할을 한다.
@@ -45,8 +48,9 @@ JVM이 OS에게 할당받은 메모리 공간
 JVM이 시작될 때 생성되고 클래스를 처음 메모리에 올릴 때 초기화되는 대상을 저장하기 위한 영역이다. 클래스와 인터페이스의 Runtime Constant Pool, 필드 및 메서드의 정보, 바이트코드가 저장된다.
   - **Heap**  
 런타임에 동적으로 할당되는 데이터가 저장되는 영역으로 객체나 배열이 저장된다. 메서드영역과 마찬가지로 힙에 할당된 데이터들은 가비지컬렉터의 대상이 된다.
-  
-  
+
+___
+
 ## GC
 **GC**(Garbage Collection)은 더이상 사용되지 않는 인스턴스를 찾아 메모리에서 삭제하는 작업을 말한다.
 
@@ -62,11 +66,22 @@ Heap은 Young, Old, Permanent 세 영역으로 나뉜다. Young 영역에서 발
 GC의 범위가 넓어 간단히 정리하고 자세한 내용은 블로그 참조로 대체한다.
 - Naver D2의 [Java Garbage Collection](https://d2.naver.com/helloworld/1329)
 - Naver D2의 [Java Reference와 GC](https://d2.naver.com/helloworld/329631)
-  
-  
+
+___
+
 ## 객체 지향의 4대 특성
 **캡상추다**
 - 캡슐화 : 비슷한 속성과 기능을 하나의 클래스로 묶은 것이다. 또한 데이터를 은닉하고 그 데이터를 접근하는 기능을 노출함으로써 외부에서 데이터를 직접 수정하지 못하게 한다.
 - 상속 : 상위 클래스의 특성을 하위 클래스가 물려 받는 것을 의미한다. 상속은 클래스의 재사용과 확장을 위해서 사용한다.
 - 추상화 : 객체들의 공통적인 특징(속성과 기능)을 뽑아내는 것이다. 즉, 우리가 구현하는 객체들이 가진 공통적인 데이터와 기능을 도출해 내는 것을 의미한다.
 - 다형성 : 여러가지 형태를 가질 수 있는 것을 의미한다. ex) 오버로딩, 오버라이딩, 상위 클래스의 하위 클래스 참조
+
+___
+
+## JAVA8 변경 사항
+- Lambda 표현식
+- Stream API
+- Default method
+- 날짜 API(java.time 패키지)
+- Optional 클래스
+___
