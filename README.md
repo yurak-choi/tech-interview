@@ -6,6 +6,7 @@
 - 데이터베이스 [move](https://github.com/yurak-choi/tech-interview/blob/master/cs/db.md)
 
 ## Language
+- JavaScript [move](https://github.com/yurak-choi/tech-interview/blob/master/language/javascript.md)
 - JAVA [move](https://github.com/yurak-choi/tech-interview/blob/master/language/java.md)
 
 ## Web
